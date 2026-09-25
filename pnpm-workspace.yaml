@@ -1,0 +1,4 @@
+allowBuilds:
+  unrs-resolver: false
+minimumReleaseAgeExclude:
+  - resend@6.29.0

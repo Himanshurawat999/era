@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+/* Design tokens. TODO: replace placeholder values with the Phase 1 measurements. */
+@theme {
+  --color-sky: #cfe0ea;
+  --color-blossom: #d9669b;
+  --color-ink: #1c1c1a;
+  --color-paper: #f4efe7;
+
+  --ease-roll: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Font faces come from the next/font variables set on <html> in layout.tsx. */
+@theme inline {
+  --font-display: var(--font-display-face), serif;
+  --font-body: var(--font-body-face), sans-serif;
+}
+
+@utility text-hero {
+  font-size: clamp(3rem, 10vw, 11rem);
+  line-height: 0.9;
+}
