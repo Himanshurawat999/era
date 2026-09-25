@@ -1,0 +1,8 @@
+<svg viewBox="0 0 1600 1600" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="circle-desk" d="M 800,800 m -676,0 a 676,676 0 1,1 1352,0 a 676,676 0 1,1 -1352,0"/>
+  </defs>
+  <text data-circle-text="" class="h4" text-anchor="middle" fill="currentColor" style="word-spacing: 0rem;">
+    <textPath href="#circle-desk" startOffset="25%">Three reasons to choose Era</textPath>
+  </text>
+</svg>
