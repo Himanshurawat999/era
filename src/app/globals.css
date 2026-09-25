@@ -6,6 +6,7 @@
   --color-blossom: #d9669b;
   --color-ink: #1c1c1a;
   --color-paper: #f4efe7;
+  --color-plum: #340c24;
 
   --ease-roll: cubic-bezier(0.65, 0, 0.35, 1);
 }
@@ -19,4 +20,28 @@
 @utility text-hero {
   font-size: clamp(3rem, 10vw, 11rem);
   line-height: 0.9;
+}
+
+/* Preloader exit. Shows the element everywhere except an arch-shaped hole whose width is
+   --arch-w and whose top edge sits at --arch-y. GSAP tweens both to open the hole.
+   Layers: left side, right side, the strip above the arch, and the two corners beside its
+   rounded top. The side and top layers overlap by 1px to avoid hairline seams. */
+@utility arch-mask {
+  --arch-w: 24vw;
+  --arch-y: 104vh;
+
+  mask-image:
+    linear-gradient(#000, #000), linear-gradient(#000, #000), linear-gradient(#000, #000),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1' preserveAspectRatio='none'%3E%3Cpath d='M0 0H2V1A1 1 0 0 0 0 1Z'/%3E%3C/svg%3E");
+  mask-size:
+    calc(50% - var(--arch-w) / 2 + 1px) 100%,
+    calc(50% - var(--arch-w) / 2 + 1px) 100%,
+    calc(var(--arch-w) + 2px) calc(var(--arch-y) + 1px),
+    var(--arch-w) calc(var(--arch-w) / 2);
+  mask-position:
+    left top,
+    right top,
+    center top,
+    center var(--arch-y);
+  mask-repeat: no-repeat;
 }

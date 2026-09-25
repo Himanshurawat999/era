@@ -6,6 +6,15 @@ export const site = {
   description: 'TODO: One-line description for search results.',
 };
 
+// TODO: placeholder copy. Arrays are one entry per line.
+export const preloader = {
+  sideLeft: 'Sun',
+  title: ['Project', 'Name'],
+  script: 'Seaside',
+  sideRight: 'Sea',
+  tagline: ['Project Name', 'Where the days slow down.'],
+} as const;
+
 export const sections = {
   hero: { id: 'hero', label: 'Hero' },
   reasons: { id: 'reasons', label: 'Reasons' },
